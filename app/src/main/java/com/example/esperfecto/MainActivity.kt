@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
             if (esPerfecto(numero)){
                 binding.tvResultado.text = "Si es Perfecto los divisores son ${numeros}"
             }else{
-                binding.tvResultado.text = "No es perfecto"
+                binding.tvResultado.text = "No es perfecto los divisores son ${numeros}"
             }
 
         }else{
