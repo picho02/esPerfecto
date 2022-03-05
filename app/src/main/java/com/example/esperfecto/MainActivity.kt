@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         if(validaCampo()){
             var numero = binding.etNumero.text.toString().toInt()
             if (esPerfecto(numero)){
-                binding.tvResultado.text = "Si es Perfecto"
+                binding.tvResultado.text = "Si es Perfecto los divisores son ${numeros}"
             }else{
                 binding.tvResultado.text = "No es perfecto"
             }
