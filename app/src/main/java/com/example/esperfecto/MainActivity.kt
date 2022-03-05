@@ -34,6 +34,7 @@ class MainActivity : AppCompatActivity() {
         return binding.etNumero.text.toString() != ""
     }
     private fun esPerfecto(num:Int):Boolean{
+        if(num != 0){
         numeros.clear()
         for (i in 1 until num){
             if (num%i == 0){
@@ -42,8 +43,12 @@ class MainActivity : AppCompatActivity() {
         }
         var sumaNum = 0
         for(i in 0 until numeros.size){
-            sumaNum = sumaNum + numeros[i]
+            sumaNum += numeros[i]
         }
         return sumaNum == num
+    }else{
+
+        return false
+    }
     }
 }
