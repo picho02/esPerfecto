@@ -31,8 +31,7 @@ class MainActivity : AppCompatActivity() {
 
     }
     private fun validaCampo():Boolean{
-        if (binding.etNumero.text.toString() == "")return false
-        else return true
+        return binding.etNumero.text.toString() != ""
     }
     private fun esPerfecto(num:Int):Boolean{
         numeros.clear()
@@ -45,10 +44,6 @@ class MainActivity : AppCompatActivity() {
         for(i in 0 until numeros.size){
             sumaNum = sumaNum + numeros[i]
         }
-        if (sumaNum == num){
-            return true
-        }else{
-            return false
-        }
+        return sumaNum == num
     }
 }
